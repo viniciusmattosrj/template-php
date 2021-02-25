@@ -1,0 +1,40 @@
+parameters:
+  git_dir: .
+  bin_dir: vendor/bin
+  process_timeout: null
+  tasks:
+    phpcs:
+      standard: PSR2
+      ignore_patterns: [./routes/*, ./tests/*, ./resources/*, ./database/*, ./bootstrap/*, public/index.php]
+    #phpunit:
+    phpversion:
+      project: '7.2'
+    phpspec:
+      config_file: ~
+      format: ~
+      stop_on_failure: false
+      verbose: false
+    phpmd:
+      whitelist_patterns: ['StaticAccess']
+      ruleset: ['cleancode', 'codesize', 'naming']
+      triggered_by: ['php']
+      exclude: [routes, tests, resources, database, bootstrap, public/index.php]
+    phpstan:
+      autoload_file: ~
+      configuration: ~
+      level: 0
+      force_patterns: []
+      ignore_patterns: [routes, tests, resources, database, bootstrap, public/index.php]
+      triggered_by: ['php']
+      memory_limit: "-1"
+    phpparser:
+      ignore_patterns: []
+      kind: php7
+      visitors:
+        never_use_else: ~
+        no_exit_statements: ~
+        forbidden_function_calls:
+          blacklist:
+            - 'var_dump'
+      triggered_by: [php]
+
