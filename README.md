@@ -8,7 +8,7 @@
 #### Tecnologias Utilizadas
 
 * Composer
-- Code style: PSR4
+- Code: PSR1, PSR12 e PSR4
 * DotEnv
 * Restful ou GraphQL 
 * Postgres &ge; 11 MySQL ou &ge; 5.7 ou MongoDB 
