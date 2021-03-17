@@ -3,15 +3,17 @@
 ## Requerimentos
 
 - Docker e docker-compose
-- PHP &ge; 7.2
+- PHP &ge; 7.3.22
 
 #### Tecnologias Utilizadas
 
 * Composer
 - Code style: PSR4
+* DotEnv
 * Restful ou GraphQL 
-* Postgres ou MongoDB 
-
+* Postgres &ge; 11 MySQL ou &ge; 5.7 ou MongoDB 
+* Phinx
+* PhpUnit
 
 #### Sobre
 
